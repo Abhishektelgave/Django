@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register student</title>
+</head>
+<body>
+    <h1>Register student</h1>
+    <form method='post'>
+        {% csrf_token %}
+        <p>First name: <input type="text" name="first_name" required ></p><br>
+        <p>last name: <input type="text" name="last_name" required ></p><br>
+        <p>Email: <input type="email" name="email" required ></p><br>
+        <button type="submit">Register</button>
+</body>
+</html>

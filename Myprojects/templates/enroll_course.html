@@ -1,0 +1,25 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enroll Course</title>
+</head>
+<body>
+    <h1>Enroll Course</h1>
+    <form method='post'>
+        {% csrf_token %}
+        <p>Select Student <select name="student_id">
+            {% for student in students %}
+            <option value="{{ student.id }}">{{ student }}</option>
+            {% endfor %}
+        </select>
+        </p><br>
+        <p>Select Course <select name="course_id">
+            {% for course in courses %}
+            <option value="{{ course.id }}">{{ course.name }}</option>
+            {% endfor %}
+        </select>
+        </p><br>
+        <button type="submit">Enroll</button>
+</body>
+</html>
